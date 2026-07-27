@@ -13,11 +13,11 @@ public class GiayTheThao extends Giay{
     private String LoaiDe;
     
     public GiayTheThao(){
-        
+        super();
     }
     
-    public GiayTheThao(String TenGiay, String LoaiGiay, String MauSac, int KichCo, int Gia, int SoLuong, String LoaiMonTheThao, Sting LoaiDe){
-        super(TenGiay, LoaiGiay, MauSac, KichCo, Gia, SoLuong);
+    public GiayTheThao(String TenGiay, String ThuongHieu, String MauSac, int KichCo, int Gia, int SoLuong, String LoaiMonTheThao, String LoaiDe){
+        super(TenGiay, ThuongHieu, MauSac, KichCo, Gia, SoLuong);
         this.LoaiMonTheThao = LoaiMonTheThao;
         this.LoaiDe = LoaiDe;
     }
@@ -38,7 +38,15 @@ public class GiayTheThao extends Giay{
         this.LoaiDe = LoaiDe;
     }
     
-    
+    @Override
+    String GiamGia(){
+        if(getThuongHieu().equalsIgnoreCase("adidas")){
+            return "Giam gia 10%";
+        }
+        else{
+            return "";
+        }
+    }
     
     
 }
